@@ -58,7 +58,7 @@ fn main() {
     // Only types that implement fmt::Display can be formatted with `{}`. User-
     // defined types do not implement fmt::Display by default.
 
-    #[allow(dead_code)] // disable `dead_code` which warn against unused module
+    #[allow(dead_code)] // disable `dead_code` which warns against unused module
     struct Structure(i32);
 
     // This will not compile because `Structure` does not implement
@@ -88,7 +88,7 @@ for these types. To print text for custom types, more steps are required.
 Implementing the `fmt::Display` trait automatically implements the
 [`ToString`] trait which allows us to [convert] the type to [`String`][string].
 
-In *line 43*, `#[allow(dead_code)]` is an [attribute] which only apply to the module after it.
+In *line 43*, `#[allow(dead_code)]` is an [attribute] which only applies to the module after it.
 
 ### Activities
 
